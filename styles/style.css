@@ -1,0 +1,29 @@
+header{
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: 900;
+}
+
+.pika-stack {
+    grid-column-start: 2;
+}
+
+.pika-stack {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    position: relative;
+    width: 100%;
+    min-width: 900px;
+}
+
+.pika-top {
+    grid-column: 1 / span 9;
+    grid-row: 1;
+    z-index: 1;
+    padding-top: 35%;
+}
+
+.lightning.bottom {
+    grid-column: 4 / -1;
+    grid-row: 1;
+}
