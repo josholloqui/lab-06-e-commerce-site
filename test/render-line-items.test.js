@@ -1,4 +1,8 @@
+import pokemon from '../data/pokemon.js';
+import { findById } from '../common/utils.js';
 import renderRows from '../cart/render-line-items.js';
+
+
 
 const test = QUnit.test;
 
@@ -6,20 +10,17 @@ QUnit.module('Render Table Rows');
 
 test('renders a pokemon to list', assert => {
     //Arrange
-    const slowking = {
-        id: 'pkn005',
-        name: 'Slowking',
-        image: 'slowking.png',
-        description: 'Slowking constantly comes up with new ideas that would change the world, but sadly as soon as it hits upon a new idea, it forgets it.',
-        category: 'water-psychic',
-        price: 999,
-        cost: 749.25
+    const rowItem = {
+        id: 'pkn007',
+        quantity: 2
     };
 
-    const expected = '<li class="water-psychic" title="Slowking constantly comes up with new ideas that would change the world, but sadly as soon as it hits upon a new idea, it forgets it."><h3>Slowking</h3><img src="../assets/products/slowking.png" alt="Slowking image"><p class="price">$999.00</p><button value="pkn005">Add</button></li>';
+    const findMew = findById(pokemon, rowItem.id);
+
+    const expected = '<tr><td class="start">Mew</td><td>2</td><td>$1000000.00</td><td class="row-total">$2000000.00</td></tr>';
     
     //Act 
-    const dom = renderPokemon(slowking);
+    const dom = renderRows(rowItem, findMew);
     const html = dom.outerHTML;
 
     //Expect
