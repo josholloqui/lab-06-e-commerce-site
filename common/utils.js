@@ -9,3 +9,8 @@ export function findById(someArray, someId) {
       
     return match;
 }
+
+export function calcLineItem(quantity, price) {
+    const total = quantity * price;
+    return Math.round(total * 100) / 100;
+}

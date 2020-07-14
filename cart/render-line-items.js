@@ -1,6 +1,6 @@
 
 
-export function renderRows(rowItem, pokemon) {
+export default function renderRows(rowItem, pokemon) {
     const tableRow = document.createElement('tr');
 
     const nameData = document.createElement('td');

@@ -1,8 +1,8 @@
-import { renderPokemon } from '../products/render.pokemon.js';
+import renderRows from '../cart/render-line-items.js';
 
 const test = QUnit.test;
 
-QUnit.module('Render Pokemon');
+QUnit.module('Render Table Rows');
 
 test('renders a pokemon to list', assert => {
     //Arrange

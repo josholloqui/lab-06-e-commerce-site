@@ -1,5 +1,5 @@
 import pokemon from '../data/pokemon.js';
-import { findById } from '../common/utils.js';
+import { findById, calcLineItem } from '../common/utils.js';
 
 const test = QUnit.test;
 
@@ -17,4 +17,18 @@ test('finds pokemon by its id', assert => {
 
     //Expect
     assert.equal(findPokemon.name, expected);
+});
+
+test('calculates the line total', assert => {
+    //Arrange
+    const quantity = 10;
+    const price = 112;
+
+    const expected = 1120;
+    
+    //Act 
+    const total = calcLineItem(quantity, price);
+
+    //Expect
+    assert.equal(total, expected);
 });
