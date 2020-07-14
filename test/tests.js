@@ -1,1 +1,2 @@
-import './example.test.js';
+import './render.pokemon.test.js';
+import './utils.test.js';

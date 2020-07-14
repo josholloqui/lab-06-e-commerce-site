@@ -6,7 +6,7 @@ const test = QUnit.test;
 
 QUnit.module('Render Pokemon');
 
-test('time to test a function', assert => {
+test('renders a pokemon to list', assert => {
     //Arrange
     // Set up your arguments and expectations
     const slowking = {
