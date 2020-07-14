@@ -19,7 +19,7 @@ test('time to test a function', assert => {
         cost: 749.25
     };
 
-    const expected = '<li class="water-psychic" title="Slowking constantly comes up with new ideas that would change the world, but sadly as soon as it hits upon a new idea, it forgets it."><h3>Slowking</h3><img src="../assets/products/slowking.png" alt="Slowking image"><p class="price">$999.00<button value="pkn005">Add</button></p></li>';
+    const expected = '<li class="water-psychic" title="Slowking constantly comes up with new ideas that would change the world, but sadly as soon as it hits upon a new idea, it forgets it."><h3>Slowking</h3><img src="../assets/products/slowking.png" alt="Slowking image"><p class="price">$999.00</p><button value="pkn005">Add</button></li>';
     
     //Act 
     // Call the function you're testing and set the result to a const

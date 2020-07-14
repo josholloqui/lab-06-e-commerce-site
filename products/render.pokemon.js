@@ -17,12 +17,12 @@ export function renderPokemon(pokemon) {
     const pElement = document.createElement('p');
     pElement.classList.add('price');
     pElement.textContent = `$${pokemon.price.toFixed(2)}`;
+    listElement.append(pElement);
 
     const buttonElement = document.createElement('button');
     buttonElement.value = pokemon.id;
     buttonElement.textContent = 'Add';
-    pElement.append(buttonElement);
-    listElement.append(pElement);
+    listElement.append(buttonElement);
 
     return listElement;
 }
