@@ -1,11 +1,10 @@
 main {
     display: grid;
-    grid-template-columns: 0.25fr 1fr .25fr;
+    grid-template-columns: 1fr;
     grid-template-rows: 1fr .25fr;
     height: 100%;
-    width: 1000px;
+    width: 90%;
     margin: 0 auto;
-    min-width: auto;
 }
 
 
@@ -18,7 +17,7 @@ header {
 }
 
 .table-container {
-    grid-column-start: 2;
+    grid-column-start: 1;
 }
 
 table {
@@ -43,7 +42,7 @@ tr:nth-child(even) {
 }
 
 .button-container {
-    grid-column-start: 2;
+    grid-column-start: 1;
     grid-row-start: 2;
     text-align: right;
 }
