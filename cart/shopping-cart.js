@@ -1,9 +1,10 @@
 import cartData from '../data/cart.js';
 import pokemonData from '../data/pokemon.js';
-import { findById } from '../common/utils.js';
+import { findById, calcOrderTotal } from '../common/utils.js';
 import renderRows from './render-line-items.js';
 
 const tableBody = document.querySelector('#insert-rows');
+const orderTotalInput = document.querySelector('#order-total');
 
 for (let i = 0; i < cartData.length; i++) {
     const rowItem = cartData[i];
@@ -12,3 +13,6 @@ for (let i = 0; i < cartData.length; i++) {
 
     tableBody.append(dom);
 }
+
+const orderTotal = calcOrderTotal(cartData, pokemonData);
+orderTotalInput.textContent = `$${orderTotal}.00`;

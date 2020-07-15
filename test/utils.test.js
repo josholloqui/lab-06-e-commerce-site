@@ -1,5 +1,6 @@
-import pokemon from '../data/pokemon.js';
-import { findById, calcLineItem } from '../common/utils.js';
+import pokemonData from '../data/pokemon.js';
+import cartData from '../data/cart.js';
+import { findById, calcLineItem, calcOrderTotal } from '../common/utils.js';
 
 const test = QUnit.test;
 
@@ -7,7 +8,7 @@ QUnit.module('Utils');
 
 test('finds pokemon by its id', assert => {
     //Arrange
-    const array = pokemon;
+    const array = pokemonData;
     const id = 'pkn001';
 
     const expected = 'Charizard';
@@ -31,4 +32,15 @@ test('calculates the line total', assert => {
 
     //Expect
     assert.equal(total, expected);
+});
+
+test('calculates order total', (assert) => {
+    // arrange
+    const expected = 1761516;
+
+    // act
+    const orderTotal = calcOrderTotal(cartData, pokemonData);
+
+    // assert
+    assert.equal(orderTotal, expected);
 });
