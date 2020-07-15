@@ -6,6 +6,11 @@ export default function renderRows(rowItem, pokemon) {
     nameData.textContent = pokemon.name;
     tableRow.append(nameData);
 
+    const imageElement = document.createElement('img');
+    imageElement.src = '../assets/products/' + pokemon.image;
+    imageElement.alt = pokemon.name + ' image';
+    nameData.append(imageElement);
+
     const quantityData = document.createElement('td');
     quantityData.textContent = rowItem.quantity;
     tableRow.append(quantityData);

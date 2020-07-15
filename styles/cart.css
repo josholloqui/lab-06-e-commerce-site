@@ -1,10 +1,11 @@
 main {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr .25fr;
+    grid-template-rows: 9fr 1fr;
     height: 100%;
     width: 90%;
     margin: 0 auto;
+    margin-bottom: 100px;
 }
 
 
@@ -45,4 +46,22 @@ tr:nth-child(even) {
     grid-column-start: 1;
     grid-row-start: 2;
     text-align: right;
+}
+
+.start {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-self: center;
+    padding-left: 40%;
+}
+
+img {
+    height: fit-content;
+    width: fit-content;
+}
+
+.cart {
+    height: 38px;
+    width: 38px;
 }

@@ -17,7 +17,7 @@ test('renders a pokemon to list', assert => {
 
     const findMew = findById(pokemon, rowItem.id);
 
-    const expected = '<tr><td class="start">Mew</td><td>2</td><td>$1000000.00</td><td class="row-total">$2000000.00</td></tr>';
+    const expected = '<tr><td class="start">Mew<img src="../assets/products/mew.png" alt="Mew image"></td><td>2</td><td>$1000000.00</td><td class="row-total">$2000000.00</td></tr>';
     
     //Act 
     const dom = renderRows(rowItem, findMew);
