@@ -1,3 +1,5 @@
+import { CART } from './constants.js';
+
 export function findById(someArray, someId) {
     let match = null;
 
@@ -26,4 +28,11 @@ export function calcOrderTotal(cart, pokemon) {
     }
 
     return Math.round(orderTotal * 100) / 100;
+}
+
+export function getCart() {
+    const rawCart = localStorage.getItem(CART);
+    let cart = JSON.parse(rawCart) || [];
+    
+    return cart;
 }

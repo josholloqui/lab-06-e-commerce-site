@@ -9,6 +9,7 @@ export default function renderRows(rowItem, pokemon) {
     const imageElement = document.createElement('img');
     imageElement.src = '../assets/products/' + pokemon.image;
     imageElement.alt = pokemon.name + ' image';
+    imageElement.classList = 'poke-img';
     nameData.append(imageElement);
 
     const quantityData = document.createElement('td');
