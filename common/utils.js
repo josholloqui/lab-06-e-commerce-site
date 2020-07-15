@@ -1,4 +1,5 @@
 import { CART } from './constants.js';
+import pokemonData from '../data/pokemon.js';
 
 export function findById(someArray, someId) {
     let match = null;
@@ -35,4 +36,16 @@ export function getCart() {
     let cart = JSON.parse(rawCart) || [];
     
     return cart;
+}
+
+export function orderDetails() {
+    const cart = getCart();
+    let confirmedDetails = [];
+    for (let i = 0; i < cart.length; i++) {
+        const cartItem = cart[i];
+        const pokemon = findById(pokemonData, cartItem.id);
+        const eachOrder = (` ${cartItem.quantity} ${pokemon.name}`);
+        confirmedDetails.push(eachOrder);
+    }
+    return confirmedDetails;
 }

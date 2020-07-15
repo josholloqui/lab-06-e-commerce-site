@@ -1,5 +1,5 @@
 import pokemonData from '../data/pokemon.js';
-import { findById, calcOrderTotal, getCart } from '../common/utils.js';
+import { findById, calcOrderTotal, getCart, orderDetails } from '../common/utils.js';
 import renderRows from './render-line-items.js';
 import { CART } from '../common/constants.js';
 
@@ -17,17 +17,6 @@ for (let i = 0; i < cart.length; i++) {
     const dom = renderRows(cartItem, pokemon);
 
     tableBody.append(dom);
-}
-
-function orderDetails() {
-    let confirmedDetails = [];
-    for (let i = 0; i < cart.length; i++) {
-        const cartItem = cart[i];
-        const pokemon = findById(pokemonData, cartItem.id);
-        const eachOrder = (` ${cartItem.quantity} ${pokemon.name}`);
-        confirmedDetails.push(eachOrder);
-    }
-    return confirmedDetails;
 }
 
 const orderTotal = calcOrderTotal(cart, pokemonData);
