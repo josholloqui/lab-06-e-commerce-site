@@ -4,8 +4,6 @@ import renderRows from './render-line-items.js';
 import { CART } from '../common/constants.js';
 
 const cart = getCart();
-// const orderDetails = 
-console.log(cart);
 const tableBody = document.querySelector('#insert-rows');
 const orderTotalInput = document.querySelector('#order-total');
 const orderButton = document.querySelector('#confirm-order');
@@ -13,7 +11,6 @@ const orderButton = document.querySelector('#confirm-order');
 for (let i = 0; i < cart.length; i++) {
     const cartItem = cart[i];
     const pokemon = findById(pokemonData, cartItem.id);
-    console.log(pokemon);
     const dom = renderRows(cartItem, pokemon);
 
     tableBody.append(dom);

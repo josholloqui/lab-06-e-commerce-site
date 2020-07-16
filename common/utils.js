@@ -32,8 +32,8 @@ export function calcOrderTotal(cart, pokemon) {
 }
 
 export function getCart() {
-    const rawCart = localStorage.getItem(CART);
-    let cart = JSON.parse(rawCart) || [];
+    const stringyCart = localStorage.getItem(CART);
+    let cart = JSON.parse(stringyCart) || [];
     
     return cart;
 }
