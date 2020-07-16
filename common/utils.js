@@ -1,3 +1,6 @@
+import { CART } from './constants.js';
+import pokemonData from '../data/pokemon.js';
+
 export function findById(someArray, someId) {
     let match = null;
 
@@ -26,4 +29,23 @@ export function calcOrderTotal(cart, pokemon) {
     }
 
     return Math.round(orderTotal * 100) / 100;
+}
+
+export function getCart() {
+    const stringyCart = localStorage.getItem(CART);
+    let cart = JSON.parse(stringyCart) || [];
+    
+    return cart;
+}
+
+export function orderDetails() {
+    const cart = getCart();
+    let confirmedDetails = [];
+    for (let i = 0; i < cart.length; i++) {
+        const cartItem = cart[i];
+        const pokemon = findById(pokemonData, cartItem.id);
+        const eachOrder = (` ${cartItem.quantity} ${pokemon.name}`);
+        confirmedDetails.push(eachOrder);
+    }
+    return confirmedDetails;
 }

@@ -1,3 +1,6 @@
+import { getCart, findById } from '../common/utils.js';
+import { CART } from '../common/constants.js';
+
 export function renderPokemon(pokemon) {
     const listElement = document.createElement('li');
     listElement.classList.add(pokemon.category);
@@ -22,6 +25,23 @@ export function renderPokemon(pokemon) {
     const buttonElement = document.createElement('button');
     buttonElement.value = pokemon.id;
     buttonElement.textContent = 'Add';
+    buttonElement.addEventListener('click', () => {
+        // setting functions to variables
+        const cart = getCart();
+        const pokemonInCart = findById(cart, pokemon.id);
+        // 
+        if (pokemonInCart) {
+            pokemonInCart.quantity++;
+        } else {
+            const newAddedPokemon = {
+                id: pokemon.id,
+                quantity: 1
+            };
+            cart.push(newAddedPokemon);
+        }
+        const stringyCart = JSON.stringify(cart);
+        localStorage.setItem(CART, stringyCart);
+    });
     listElement.append(buttonElement);
 
     return listElement;
