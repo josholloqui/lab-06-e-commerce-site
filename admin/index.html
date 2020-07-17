@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Poke Products</title>
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="./admin.css">
+    <link rel="stylesheet" href="https://use.typekit.net/nqd2cao.css">
+</head>
+
+<body>
+    <header>
+        <h1>Pocket Monster Shop</h1>
+        
+        <nav>
+            <a href="../">Home</a>
+            <a href="../products/index.html">Shop</a>
+            <a href="./index.html">Admin</a>
+            <a href="../cart/index.html"><img height="38px" width="38px" src="../assets/shopping-basket.png"/></a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Add Product</h2>
+        <form id="form">
+            <label>
+                ID:
+                <input name="id"/>
+            </label>
+            <label>
+                Name:
+                <input name="name"/>
+            </label>
+            <label>
+                Image:
+                <input name="image"/>
+            </label>
+            <label>
+                Description:
+                <input name="description"/>
+            </label>
+            <label>
+                Category:
+                <input name="category"/>
+            </label>
+            <label>
+                Price:
+                <input type="number" name="price"/>
+            </label>
+            <label>
+                Cost:
+                <input type="number" name="cost"/>
+            </label>
+            <button>Add Product</button>
+        </form>
+    <footer>
+        <div>&copy; 2020 Pocket Monster</div>
+    </footer>
+
+    <script src="./admin.js" type="module"></script>
+
+</body>
+
+
+</html>

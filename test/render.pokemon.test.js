@@ -1,4 +1,4 @@
-import { renderPokemon } from '../products/render.pokemon.js';
+import renderPokemon from '../products/render.pokemon.js';
 
 const test = QUnit.test;
 
