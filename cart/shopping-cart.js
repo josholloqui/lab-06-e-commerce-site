@@ -1,8 +1,8 @@
-import pokemonData from '../data/pokemon.js';
 import { findById, calcOrderTotal, getCart, orderDetails } from '../common/utils.js';
 import renderRows from './render-line-items.js';
-import { CART } from '../common/constants.js';
+import { CART, POKEMON } from '../common/constants.js';
 
+const pokemonData = JSON.parse(localStorage.getItem(POKEMON));
 const cart = getCart();
 const tableBody = document.querySelector('#insert-rows');
 const orderTotalInput = document.querySelector('#order-total');
