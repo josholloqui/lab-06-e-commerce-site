@@ -27,6 +27,11 @@ export default function renderPokemon(pokemon) {
     buttonElement.textContent = 'Add';
     buttonElement.addEventListener('click', () => {
         // setting functions to variables
+        const notification = document.getElementById('notification');
+        notification.className = 'show';
+        setTimeout(function() {
+            notification.className = notification.className.replace('show', '');
+        }, 1000);
         const cart = getCart();
         const pokemonInCart = findById(cart, pokemon.id);
         // 
