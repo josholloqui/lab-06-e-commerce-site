@@ -6,4 +6,4 @@ function passwordCheck(){
         window.location = '../';
     }
 }
-window.onload=passwordCheck;
+window.onload = passwordCheck;

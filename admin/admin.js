@@ -1,5 +1,5 @@
-import pokemonData from '../data/pokemon.js'
-import { POKEMON } from '../common/constants.js'
+import pokemonData from '../data/pokemon.js';
+import { POKEMON } from '../common/constants.js';
 
 const adminForm = document.getElementById('form');
 
@@ -26,4 +26,4 @@ adminForm.addEventListener('submit', e => {
     localStorage.setItem(POKEMON, stringPokemon);
 
     window.location = '../products/index.html';
-})
+});
