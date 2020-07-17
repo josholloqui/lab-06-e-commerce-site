@@ -1,7 +1,7 @@
 import { getCart, findById } from '../common/utils.js';
 import { CART } from '../common/constants.js';
 
-export function renderPokemon(pokemon) {
+export default function renderPokemon(pokemon) {
     const listElement = document.createElement('li');
     listElement.classList.add(pokemon.category);
 
