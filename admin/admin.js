@@ -1,7 +1,7 @@
-import pokemonData from '../data/pokemon.js';
 import { POKEMON } from '../common/constants.js';
 
 const adminForm = document.getElementById('form');
+const pokemonData = JSON.parse(localStorage.getItem(POKEMON));
 
 adminForm.addEventListener('submit', e => {
     e.preventDefault();
